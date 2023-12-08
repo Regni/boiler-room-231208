@@ -20,16 +20,16 @@ const products = [
 //show cart
 //remove from cart
 //calculate price
-//checkboxes for filter (eventlistener) (optinal)
-//main page, all products
-//  render filter in html (customer choice) (part of main page)
+//checkboxes for filter (eventlistener) (optinal) (DONE)
+//main page, all products (DONE)
+//  render filter in html (customer choice) (part of main page) (DONE)
 const card = document.getElementById("product-container");
 renderAll();
 
 function renderAll() {
   const allItems = products.map(
     (item) =>
-      `<div class = "gridItemContainer"><h3>${item.name}</h3> <div class = "itemPurchaseInfo"><p>${item.price}</p> <button class = "buyButton" id = btn${item.id}> Köp! </button></div></div> `
+      `<div class = "gridItemContainer"><h3>${item.name}</h3> <div class = "itemPurchaseInfo"><p>${item.price} sek</p> <button class = "buyButton" id = btn${item.id}> Köp! </button></div></div> `
   );
 
   card.innerHTML = allItems.join("");
@@ -49,10 +49,19 @@ function filter(category) {
     card.innerHTML = filteredItems
       .map(
         (item) =>
-          `<div class = "gridItemContainer"><h3>${item.name}</h3> <div class = "itemPurchaseInfo"><p>${item.price}</p> <button class = "buyButton" id = btn${item.id}> Köp! </button></div></div> `
+          `<div class = "gridItemContainer"><h3>${item.name}</h3> <div class = "itemPurchaseInfo"><p>${item.price} sek</p> <button class = "buyButton" id = btn${item.id}> Köp! </button></div></div> `
       )
       .join("");
   } else {
     renderAll();
   }
 }
+
+const payBTN = document.getElementById("checkout");
+payBTN.addEventListener("click", () => {
+  alert("Dina saker är på väg!");
+});
+
+payBTN.addEventListener("click", () => {
+  localStorage.setItem("test", "alot of stuff");
+});
