@@ -23,3 +23,17 @@ const cart = [];
 //checkboxes for filter (eventlistener) (optinal)
 //main page, all products
 //  render filter in html (customer choice) (part of main page)
+
+renderAll();
+
+function renderAll() {
+  const card = document.getElementById("product-container");
+
+  const allItems = products.map(
+    (item) =>
+      `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id = ${item.id}> Köp! </button></div> `
+  );
+
+  card.innerHTML = allItems.join("");
+  console.log(allItems);
+}
