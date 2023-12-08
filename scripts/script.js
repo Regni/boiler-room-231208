@@ -29,7 +29,7 @@ renderAll();
 function renderAll() {
   const allItems = products.map(
     (item) =>
-      `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id = btn${item.id}> Köp! </button></div> `
+      `<div class = "gridItemContainer"><h3>${item.name}</h3> <div class = "itemPurchaseInfo"><p>${item.price}</p> <button class = "buyButton" id = btn${item.id}> Köp! </button></div></div> `
   );
 
   card.innerHTML = allItems.join("");
