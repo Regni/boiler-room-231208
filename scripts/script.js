@@ -14,3 +14,12 @@ const products = [
 ];
 
 const cart = [];
+
+//Functions:
+//add to cart
+//show cart
+//remove from cart
+//calculate price
+//checkboxes for filter (eventlistener) (optinal)
+//main page, all products
+//  render filter in html (customer choice) (part of main page)
