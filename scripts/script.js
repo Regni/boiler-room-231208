@@ -36,14 +36,12 @@ function renderAll() {
 }
 const categoryBTN = document.querySelector(".categories");
 categoryBTN.addEventListener("click", (e) => {
-  console.log(e.target.className);
   if (e.target.className != "categories") {
     filter(e.target.textContent.toLocaleLowerCase());
   }
 });
 
 function filter(category) {
-  console.log(category);
   if (category != "ta bort filter") {
     const filteredItems = products.filter((e) => e.category == category);
     card.innerHTML = filteredItems
@@ -60,8 +58,4 @@ function filter(category) {
 const payBTN = document.getElementById("checkout");
 payBTN.addEventListener("click", () => {
   alert("Dina saker är på väg!");
-});
-
-payBTN.addEventListener("click", () => {
-  localStorage.setItem("test", "alot of stuff");
 });
