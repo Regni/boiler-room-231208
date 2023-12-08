@@ -1,9 +1,6 @@
 const cart = [];
-<<<<<<< HEAD
 
 const cartContainer = document.getElementById("cart");
-=======
->>>>>>> main
 
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
@@ -21,7 +18,6 @@ btn4.addEventListener("click", addToCart);
 function addToCart(event) {
   const { target } = event;
 
-<<<<<<< HEAD
     switch(target.id){
         case 'btn1':
             cart.push(products[0]);
@@ -38,33 +34,13 @@ function addToCart(event) {
     }
     console.log(cart);
     displayCart();
-=======
-  switch (target.id) {
-    case "btn1":
-      cart.push(products[0]);
-      break;
-    case "btn2":
-      cart.push(products[1]);
-      break;
-    case "btn3":
-      cart.push(products[2]);
-      break;
-    case "btn4":
-      cart.push(products[3]);
-      break;
-  }
-  //displayCart();
-
-  console.log(cart);
->>>>>>> main
 }
 
 //* display cart
-<<<<<<< HEAD
 function displayCart() { 
     const cartItems = cart.map(
       (item) =>
-        `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id = remove-btn${item.id}> Ta bort! </button></div> `
+        `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id= remove-btn${item.id}> Ta bort! </button></div> `
     );
   
     cartContainer.innerHTML = cartItems.join("");
@@ -73,57 +49,28 @@ function displayCart() {
 
 cartContainer.addEventListener('click', removeFromCart);
 
-=======
-//använd map på cart. cart.map()
-// function displayCart(){
-//     let cartItems = cart.map((product) => {
-//         return `
-//         <div class="product">
-//             <h3>${product.name}</h3>
-//             <p>Price: ${product.price}</p>
-//             <p>Description: ${product.description}</p>
-//         </div>
-//         `
-//     });
-// }
->>>>>>> main
 //* remove from cart
 function removeFromCart(event){
     const {target} = event;
 
     if(target.tagName === "BUTTON"){
+        console.log(cart.indexOf(target.id));
         switch(target.id){
             case 'remove-btn1':
-                console.log("remove 1");
-                const removeIndex = cart.findIndex(findItem);
-
-                function findItem(item){
-                    return 
-                }
-                /* const numbers21 = [1, 2, 3, 4, 5];
-
-                const result21 = numbers21.findIndex(findThree);
-
-                function findThree(value) {
-                    return value === 3;
-                }
-            
-                console.log(removeIndex);
-                // cart.splice()
+                cart.splice(0, 1);
                 break;
             case 'remove-btn2':
-                console.log("remove 2");
-                // cart.splice()
+                cart.splice(1, 1);
                 break;
             case 'remove-btn3':
-                console.log("remove 3");
-                // cart.splice()
+                cart.splice(2, 1);
                 break;
             case 'remove-btn4':
-                console.log("remove 4");
-                // cart.splice()
+                cart.splice(3, 1);
                 break;
         }
+        console.log(cart);
+        displayCart();
     }
 
     
