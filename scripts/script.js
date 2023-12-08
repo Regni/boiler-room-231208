@@ -13,7 +13,7 @@ const products = [
   { id: 4, name: "Mobiltelefon", category: "elektronik", price: 500 },
 ];
 
-const cart = [];
+// const cart = [];
 
 //Functions:
 //add to cart
@@ -31,7 +31,7 @@ function renderAll() {
 
   const allItems = products.map(
     (item) =>
-      `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id = ${item.id}> Köp! </button></div> `
+      `<div><h3>${item.name}</h3> <p>${item.price}</p> <button id = btn${item.id}> Köp! </button></div> `
   );
 
   card.innerHTML = allItems.join("");
