@@ -28,12 +28,16 @@
   margin: 1rem;
   color: white;
   border: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 #product-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: 20vw 20vw 20vw 20vw;
+  min-width: 350px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  margin: 1rem;
 }
 
 .gridItemContainer {
