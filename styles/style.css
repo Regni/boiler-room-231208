@@ -1,1 +1,25 @@
-/* styles here */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: center;
+  background-color: #212528;
+  color: white;
+  padding: 1rem 0rem;
+}
+
+#product-container {
+  border: 2px solid red;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  gap: 1rem;
+}
+
+.div {
+  border: 2px solid red;
+}
