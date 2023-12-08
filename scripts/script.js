@@ -13,7 +13,7 @@ const products = [
   { id: 4, name: "Mobiltelefon", category: "elektronik", price: 500 },
 ];
 
-//const cart = [];
+// const cart = [];
 
 //Functions:
 //add to cart
